@@ -7,39 +7,34 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 26),
-      decoration: BoxDecoration(
-        color: kFontLight.withOpacity(0.05),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: kFontLight.withOpacity(0.3), width: 1),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Search for history, classes...',
-              style: TextStyle(
-                color: kFontLight,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.all(6),
-              decoration: BoxDecoration(
-                color: kAccent,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-            )
-          ],
+        margin: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        clipBehavior: Clip.antiAlias,
+        decoration: BoxDecoration(
+          border: Border.all(color: kFontLight.withOpacity(0.3), width: 1),
+          borderRadius: BorderRadius.circular(16),
         ),
-      ),
-    );
+        child: TextField(
+            cursorColor: kFontLight,
+            decoration: InputDecoration(
+              suffixIcon: Padding(
+                padding: const EdgeInsets.all(6),
+                child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: kAccent,
+                    ),
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    )),
+              ),
+              fillColor: kFontLight.withOpacity(.05),
+              filled: true,
+              contentPadding:
+                  EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              border: InputBorder.none,
+              hintText: 'Search for history, classes...',
+              hintStyle: TextStyle(color: kFontLight),
+            )));
   }
 }
