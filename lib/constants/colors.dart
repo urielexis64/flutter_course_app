@@ -8,3 +8,6 @@ const Color kAccent = Color(0xFFFDCA73);
 const Color kFont = Color(0xFF252435);
 const Color kFontLight = Color(0xFFB4B7BF);
 const Color kCardBackground = Color(0xFFedf6f3);
+const Color kDarkGreen = Color(0xFFdaefe8);
+const Color kDisabled = Color(0xfff6f6f6);
+const Color kDarkGrey = Color(0xff8ba2ac);
